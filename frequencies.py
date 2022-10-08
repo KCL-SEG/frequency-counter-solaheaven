@@ -1,12 +1,10 @@
 """Frequencies function."""
 """ENTER YOUR SOLUTION HERE!"""
-from ast import main
+
 from collections import Counter
 def frequencies(items):
-    freq = {}
-    for i in items:
-        freq[i] = items.count(i)
-    return freq
+    freq = dict(Counter(i for sub in items for i in set(sub)))
+    
 
 dict = frequencies(items)
 for key in (dict.keys()):
