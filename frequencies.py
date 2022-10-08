@@ -7,10 +7,9 @@ def frequencies(items):
         return {}
     else:
         freq = {}
-        for item in str(items):
+        items1 = list(map(str, items))
+        for item in (items1):
             if (item in freq):
-                freq[item] += 1
-            elif (type(item) is int) and item in freq:
                 freq[item] += 1
             else:
                 freq[item] = 1
