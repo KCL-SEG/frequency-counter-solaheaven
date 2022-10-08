@@ -10,7 +10,7 @@ def frequencies(items):
         for item in str(items):
             if (item in freq):
                 freq[item] += 1
-            if (type(item) is int) and item in freq:
+            elif (type(item) is int) and item in freq:
                 freq[item] += 1
             else:
                 freq[item] = 1
