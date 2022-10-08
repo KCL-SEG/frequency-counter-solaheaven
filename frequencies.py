@@ -1,8 +1,16 @@
 """Frequencies function."""
 """ENTER YOUR SOLUTION HERE!"""
-import collections
+from ast import main
+from collections import Counter
 def frequencies(items):
-    newitems = [tuple(str(ele) for ele in sub) for sub in items]
-    newitems = collections.Counter(items)
+    freq = {}
+    for i in items:
+        freq[i] = items.count(i)
+    return freq
 
-    return dict(newitems)
+dict = frequencies(items)
+for key in (dict.keys()):
+    print(key + ': ' + str(dict[key]))
+
+
+
